@@ -1,19 +1,12 @@
 <template>
-  <div id="app">
+  <div id="me">
     <home></home>
   </div>
 </template>
 
 <script>
 
-import home from './components/home.vue'
-
-export default {
-  name: 'App',
-  components: {
-    home
-  }
-}
+export default {name: 'iAm'}
 </script>
 
 <style>
@@ -23,7 +16,8 @@ export default {
   text-decoration: none;
   background:black;
   margin:0;
-  padding:0
+  padding:0;
+  text-decoration:none
 }
 
 @font-face {
@@ -31,7 +25,4 @@ export default {
   src: url(../fontFamily/Red_Hat_Display/RedHatDisplay-VariableFont_wght.ttf);
 }
 
-#app {
- font-family: RedHat
-}
 </style>

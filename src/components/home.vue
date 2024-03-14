@@ -2,7 +2,7 @@
   <div class="container">
     <strong :style="strongStyle">Mon portfolio</strong>
     <div :style="containerStyle">
-      <a>Description</a>
+      <a href='me.html'>Description</a>
       <a>Projets</a>
       <a>Veille technologique</a>
       <a>Tableau de synthèse</a>
