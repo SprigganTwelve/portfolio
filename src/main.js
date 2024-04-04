@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import iAm from './iAm.vue'
+// import iAm from './iAm.vue'
 
 Vue.config.productionTip = false
 
@@ -15,9 +15,9 @@ new Vue({
   template: '<App/>'
 })
 
-new Vue({
-  el: '#iAm',
-  router,
-  components: {iAm},
-  template: '<iAm/>'
-})
+// new Vue({
+//   el: '#iAm',
+//   router,
+//   components: {iAm},
+//   template: '<iAm/>'
+// })
