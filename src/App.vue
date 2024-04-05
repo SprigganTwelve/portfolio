@@ -47,6 +47,14 @@ export default {
   background-size: cover;
 
 }
+span{
+  font-size: 30px;
+}
+
+a{
+  font-size: 20px;
+}
+
 /* General style   */
 
 </style>

@@ -1,9 +1,11 @@
 <template>
   <div class="showingUp spaceBetween" :style="move" >
     <div class="showingUp-mainTrunck">
-        <span v-rewrite class="one">Ange Paterne dali</span>
-        <span v-rewrite ref="devWeb" class="two">Développeur fullStack Junior</span>
-        <div ref="boxImage" class = "three">
+        <span v-rewrite class="one">Ange-Paterne</span>
+        <span v-rewrite class="two">Zouayobo Dali</span>
+        <span v-rewrite ref="devWeb" class="three">Développeur fullStack Junior</span>
+
+        <div ref="boxImage" class = "four">
             <img class="showingUp-imgIcon" src="../assets/images/ink.png" alt="linkdin">
             <img class="showingUp-imgIcon" src="../assets/images/github-icon-24.jpg" alt="gitHub">
             <img class='showingUp-imgIcon' src='../assets/images/9204385.png' alt='gitHub'>
@@ -46,7 +48,7 @@ export default {
           chars.forEach((char, index) => {
             setTimeout(() => {
               el.textContent += char
-            }, index * 110)
+            }, index * 120)
           })
         }
       }, 200)
@@ -95,7 +97,7 @@ export default {
 /* indentation  */
 .showingUp-mainTrunck .one{
   margin-left:140px;
-  background-image: linear-gradient(to right,#2AD5FA, #FF0000);;
+  background-image: linear-gradient(to right,#2AD5FA, #FF0000);
   -webkit-background-clip: text;
   color: transparent;
   font-weight:bold;
@@ -104,16 +106,24 @@ export default {
 
 .showingUp-mainTrunck .two{
     margin-left: 180px;
+    background: linear-gradient(to right,#FF0000, #d1f1f8 );
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight:bold;
+    transition: all 0.5;
 }
 
-.showingUp-mainTrunck .three{
+.showingUp .three{
+  margin-left: 200px;
+}
+
+.showingUp-mainTrunck .four{
     display:flex;
     gap:20px;
-    margin-left:230px;
+    margin-left:240px;
 }
 
-.showingUp-mainTrunck .three{
+.showingUp-mainTrunck .four{
     cursor:pointer
 }
-
 </style>

@@ -3,11 +3,11 @@
   <div class="navBar transitionSpan spaceBetween " :style="move">
     <div class = "inStart"  >
           <div id = "rond" ></div>
-          <span>Portfolio</span>
+          <span v-rewrite>Portfolio</span>
     </div>
     <div class="inEnd " id="navBar-hoverOption">
         <a href='' >Veille Technologique</a>
-        <a href='' >Projets</a>
+        <a href='../.html/projets.html' >Projets</a>
         <a href = '' >Compétences</a>
         <a href ='' >A propos</a>
     </div>
