@@ -1,9 +1,8 @@
 <template>
   <div class="showingUp spaceBetween" :style="move" >
-    <div class="showingUp-mainTrunck">
-        <span class="one">Ange Paterne dali</span>
-        <span class="two">Developppeur Fullstack</span>
-        <div class = "three">
+    <div ref="mainTrunck" class="showingUp-mainTrunck">
+        <span v-rewrite ref="name" class="one">Ange Paterne dali</span>
+        <div ref="boxImage" class = "three">
             <img class="showingUp-imgIcon" src="../assets/images/ink.png" alt="linkdin">
             <img class="showingUp-imgIcon" src="../assets/images/github-icon-24.jpg" alt="gitHub">
             <img class='showingUp-imgIcon' src='../assets/images/9204385.png' alt='gitHub'>
@@ -32,6 +31,26 @@ export default {
         top: 0
       })
     }, 100)
+  },
+  directives: {
+    rewrite: function (el, binding) {
+      setTimeout(() => {
+        let chars = el.textContent.split('')
+        el.textContent = ''
+        chars.forEach((char, index) => {
+          setTimeout(() => {
+            el.textContent += char
+          }, index * 110)
+        })
+      }, 200)
+    }
+  },
+  methods: {
+    appearsBefore: function (parent, before, next, time = 0) {
+      setTimeout(() => {
+        parent.insertBefore(before, next)
+      }, time)
+    }
   }
 }
 </script>
@@ -72,6 +91,7 @@ export default {
   -webkit-background-clip: text;
   color: transparent;
   font-weight:bold;
+  transition: all 0.5;
 }
 
 .showingUp-mainTrunck .two{
