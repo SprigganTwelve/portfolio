@@ -1,17 +1,21 @@
 <template>
   <div id="app">
-    <home></home>
+    <navBar></navBar>
+    <showingUp></showingUp>
   </div>
 </template>
 
 <script>
 
-import home from './components/home.vue'
+import navBar from './components/navBar.vue'
+import showingUp from './components/showingUp.vue'
+// import './assets/styles/style.css'
 
 export default {
   name: 'App',
   components: {
-    home
+    navBar,
+    showingUp
   }
 }
 </script>
@@ -21,9 +25,9 @@ export default {
 *{
   list-style-type: none;
   text-decoration: none;
-  background:black;
   margin:0;
-  padding:0
+  padding:0;
+  overflow:hidden
 }
 
 @font-face {
@@ -32,6 +36,17 @@ export default {
 }
 
 #app {
- font-family: RedHat
+ font-family: RedHat;
+ color:white;
+ height:100vh;
+  background:url("assets/images/R.jpeg"); /*abstract-black-splat-grunge-brush-texture-free-vector.jpg*/
+  height:100vh;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
+/* General style   */
+
 </style>
