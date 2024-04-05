@@ -1,7 +1,8 @@
 <template>
   <div class="showingUp spaceBetween" :style="move" >
-    <div ref="mainTrunck" class="showingUp-mainTrunck">
-        <span v-rewrite ref="name" class="one">Ange Paterne dali</span>
+    <div class="showingUp-mainTrunck">
+        <span v-rewrite class="one">Ange Paterne dali</span>
+        <span v-rewrite ref="devWeb" class="two">Développeur fullStack Junior</span>
         <div ref="boxImage" class = "three">
             <img class="showingUp-imgIcon" src="../assets/images/ink.png" alt="linkdin">
             <img class="showingUp-imgIcon" src="../assets/images/github-icon-24.jpg" alt="gitHub">
@@ -31,19 +32,26 @@ export default {
         top: 0
       })
     }, 100)
+    setTimeout(() => {
+      this.devWebText = 'fgfg'
+    }, 2900)
   },
   directives: {
+    /* writting aniamtion */
     rewrite: function (el, binding) {
       setTimeout(() => {
         let chars = el.textContent.split('')
-        el.textContent = ''
-        chars.forEach((char, index) => {
-          setTimeout(() => {
-            el.textContent += char
-          }, index * 110)
-        })
+        if (el.textContent !== '') {
+          el.textContent = ''
+          chars.forEach((char, index) => {
+            setTimeout(() => {
+              el.textContent += char
+            }, index * 110)
+          })
+        }
       }, 200)
     }
+    /* end */
   },
   methods: {
     appearsBefore: function (parent, before, next, time = 0) {
