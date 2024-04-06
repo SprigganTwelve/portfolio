@@ -1,6 +1,6 @@
 <template>
 <!-- for project's header--->
-  <div  class="stack">
+  <div  class="stack" :style= "move">
 
     <!--stack : language elements--->
 
@@ -9,10 +9,50 @@
           <div class="stack-technique">
               <div class="language">
                 <div class="type">
-                  <span>html</span>
-                  <span>advanced</span>
+                  <span v-rewrite>html</span>
+                  <span  v-rewrite >advanced</span>
                 </div>
                 <div class="gauge"><div id="color1">color</div></div>
+              </div>
+          </div>
+
+          <div class="stack-technique">
+              <div class="language">
+                <div class="type">
+                  <span  v-rewrite>css</span>
+                  <span  v-rewrite>advanced</span>
+                </div>
+                <div class="gauge"><div id="color2">color</div></div>
+              </div>
+          </div>
+
+          <div class="stack-technique">
+              <div class="language">
+                <div class="type">
+                  <span  v-rewrite>js</span>
+                  <span  v-rewrite>advanced</span>
+                </div>
+                <div class="gauge"><div id="color3">color</div></div>
+              </div>
+          </div>
+
+          <div class="stack-technique">
+              <div class="language">
+                <div class="type">
+                  <span  v-rewrite>php</span>
+                  <span  v-rewrite>regular</span>
+                </div>
+                <div class="gauge"><div id="color4">color</div></div>
+              </div>
+          </div>
+
+          <div class="stack-technique">
+              <div class="language">
+                <div class="type">
+                  <span  v-rewrite>vue js</span>
+                  <span  v-rewrite>begginer</span>
+                </div>
+                <div class="gauge"><div id="color5">color</div></div>
               </div>
           </div>
 
@@ -25,14 +65,14 @@
               <span>Technologies et compétences additionnel</span>
               <ul>
                   <ul>
-                    <li>- git</li>
-                    <li>- vs-Code</li>
-                    <li>- quick learning</li>
+                    <li  v-rewrite>- git</li>
+                    <li  v-rewrite>- vs-Code</li>
+                    <li  v-rewrite>- quick learning</li>
                   </ul>
                   <ul>
-                    <li>- git</li>
-                    <li>- vs-Code</li>
-                    <li>- quick learning</li>
+                    <li  v-rewrite>- git</li>
+                    <li  v-rewrite>- vs-Code</li>
+                    <li  v-rewrite>- quick learning</li>
                   </ul>
               </ul>
 
@@ -45,7 +85,12 @@
 <script>
 
 export default {
-  name: 'stack'
+  name: 'stack',
+  data () {
+    return {
+
+    }
+  }
 }
 
 </script>
@@ -89,6 +134,41 @@ export default {
 
 .stack-technique .language > .gauge > #color1 {
   width:60%;
+  background-image: linear-gradient(to right,#13ADC7, #6978D1,#945DD6);
+  border-radius:20px;
+  color:transparent
+}
+
+.stack-technique .language > .gauge > #color2{
+  width:80%;
+  background-image: linear-gradient(to right,#13ADC7, #6978D1,#945DD6);
+  border-radius:20px;
+  color:transparent
+}
+
+.stack-technique .language > .gauge > #color2{
+  width:70%;
+  background-image: linear-gradient(to right,#13ADC7, #6978D1,#945DD6);
+  border-radius:20px;
+  color:transparent
+}
+
+.stack-technique .language > .gauge > #color3{
+  width:30%;
+  background-image: linear-gradient(to right,#13ADC7, #6978D1,#945DD6);
+  border-radius:20px;
+  color:transparent
+}
+
+.stack-technique .language > .gauge > #color4{
+  width:60%;
+  background-image: linear-gradient(to right,#13ADC7, #6978D1,#945DD6);
+  border-radius:20px;
+  color:transparent
+}
+
+.stack-technique .language > .gauge > #color5 {
+  width:10%;
   background-image: linear-gradient(to right,#13ADC7, #6978D1,#945DD6);
   border-radius:20px;
   color:transparent

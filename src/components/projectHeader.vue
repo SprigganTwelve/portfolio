@@ -5,7 +5,7 @@
           <img src="../assets/images/gojoSatoru.jpeg" alt="">
           <span>name</span>
     </div>
-    <p>
+    <p  v-rewrite>
         Description
     </p>
   </div>
