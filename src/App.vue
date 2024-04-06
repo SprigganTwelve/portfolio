@@ -32,7 +32,7 @@ export default {
 
 @font-face {
   font-family: RedHat;
-  src: url(../fontFamily/Red_Hat_Display/RedHatDisplay-VariableFont_wght.ttf);
+  src: url(assets/fontFamily/Red_Hat_Display/RedHatDisplay-VariableFont_wght.ttf);
 }
 
 #app {

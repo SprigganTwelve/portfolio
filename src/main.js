@@ -6,7 +6,24 @@ import App2 from './App2.vue'
 import router from './router'
 
 Vue.config.productionTip = false
-
+// global
+Vue.directive('rewrite', {
+  bind (el, bind, vnode) {
+    /* writting aniamtion */
+    setTimeout(() => {
+      let chars = el.textContent.split('')
+      if (el.textContent !== '') {
+        el.textContent = ''
+        chars.forEach((char, index) => {
+          setTimeout(() => {
+            el.textContent += char
+          }, index * 110)
+        })
+      }
+    }, 200)
+    /* end */
+  }
+})
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
@@ -18,6 +35,6 @@ new Vue({
 new Vue({
   el: '#app2',
   router,
-  components: {App2},
+  components: { App2 },
   template: '<App2/>'
 })

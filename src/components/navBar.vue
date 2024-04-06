@@ -7,7 +7,7 @@
     </div>
     <div class="inEnd " id="navBar-hoverOption">
         <a href='' >Veille Technologique</a>
-        <a href='../.html/projets.html' >Projets</a>
+        <a href='projets.html' >Projets</a>
         <a href = '' >Compétences</a>
         <a href ='' >A propos</a>
     </div>
