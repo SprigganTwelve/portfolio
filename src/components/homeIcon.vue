@@ -15,15 +15,16 @@ export default {
 <style>
 .homeIcon-box{
     width:100vh;
-    position:absolute
+    position:absolute;
 }
 svg{
-    fill:white;
-    background:black;
+    fill:black;
+    background:white;
     margin-left:30px;
     padding:10px;
     margin-top:20px;
     border-radius:50%;
+    margin-bottom:15px;
     cursor:pointer
 }
 </style>

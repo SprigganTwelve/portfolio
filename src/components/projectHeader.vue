@@ -37,13 +37,14 @@ export default {
 .projectHeader > p{
   text-align : center;
   font-size:20px;
-  padding:20px;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  padding:30px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
 }
 
 .projectHeader > div img {
   height:200px;
+  border-radius:20px;
   object-fit:cover;
   object-position:center;
 }

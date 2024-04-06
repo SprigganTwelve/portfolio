@@ -1,9 +1,14 @@
 <template>
   <div class="showingUp spaceBetween" :style="move" >
     <div class="showingUp-mainTrunck">
+
+    <!--presentation--->
+
         <span v-rewrite class="one">Ange-Paterne</span>
         <span v-rewrite class="two">Zouayobo Dali</span>
         <span v-rewrite ref="devWeb" class="three">Développeur fullStack Junior</span>
+
+    <!--link image--->
 
         <div ref="boxImage" class = "four">
             <img class="showingUp-imgIcon" src="../assets/images/ink.png" alt="linkdin">
@@ -11,6 +16,7 @@
             <img class='showingUp-imgIcon' src='../assets/images/9204385.png' alt='gitHub'>
         </div>
     </div>
+    <!--my image--->
             <img class='showingUp-imgProfil' src='../assets/images/okotsu.jpg' alt='gitHub'>
   </div>
 </template>
@@ -27,6 +33,8 @@ export default {
     }
   },
   mounted () {
+    // moving main conetnt and stay foward at the top
+
     setTimeout(() => {
       this.move.transform = 'translateX(0)'
       this.move.transition = 'all 3s ease'
@@ -39,6 +47,7 @@ export default {
     }, 2900)
   },
   directives: {
+
     /* writting aniamtion */
     rewrite: function (el, binding) {
       setTimeout(() => {
@@ -53,7 +62,9 @@ export default {
         }
       }, 200)
     }
+
     /* end */
+
   },
   methods: {
     appearsBefore: function (parent, before, next, time = 0) {
@@ -66,12 +77,26 @@ export default {
 </script>
 
 <style >
+
+/*----glabal display (first and second items) -----*/
+
 .showingUp{
     display:flex;
     align-items:center;
     height:100%;
     width:100%
 }
+
+.showingUp-mainTrunck {
+    display:flex;
+    flex-direction:column;
+    gap: 40px;
+    font-size:25px
+}
+
+/*---------*/
+
+/*---image setting */
 
 .showingUp-imgIcon{
     height:30px;
@@ -88,13 +113,10 @@ export default {
    object-position:center
 }
 
-.showingUp-mainTrunck {
-    display:flex;
-    flex-direction:column;
-    gap: 40px;
-    font-size:25px
-}
-/* indentation  */
+/*---------*/
+
+/* indentation/space */
+
 .showingUp-mainTrunck .one{
   margin-left:140px;
   background-image: linear-gradient(to right,#2AD5FA, #FF0000);
@@ -122,6 +144,8 @@ export default {
     gap:20px;
     margin-left:240px;
 }
+
+/*------*/
 
 .showingUp-mainTrunck .four{
     cursor:pointer

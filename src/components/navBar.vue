@@ -1,17 +1,27 @@
 <template>
-<!--transitionSpan/spaceBatween are global style-->
+
+<!-- main trunck-->
+
   <div class="navBar transitionSpan spaceBetween " :style="move">
+
+    <!-- circle -->
+
     <div class = "inStart"  >
           <div id = "rond" ></div>
           <span v-rewrite>Portfolio</span>
     </div>
+
+    <!--nav options-->
+
     <div class="inEnd " id="navBar-hoverOption">
         <a href='' >Veille Technologique</a>
         <a href='projets.html' >Projets</a>
         <a href = '' >Compétences</a>
         <a href ='' >A propos</a>
     </div>
+
   </div>
+
 </template>
 
 <script>
@@ -19,21 +29,26 @@ export default {
   name: 'navBar',
   data: () => {
     return {
+      // first positon before moving
       move: {
         transform: 'translateY(100vh)'
       }
     }
   },
   mounted () {
+    // moving of main trunck after mount
     setTimeout(() => {
       this.move.transition = 'all 2s ease'
       this.move.transform = 'translateY(0)'
     }, 100)
   }
+
 }
 </script>
 
 <style>
+/* dealing with link/nav options */
+
 .navBar #navBar-hoverOption {
   cursor:pointer;
 }
@@ -55,6 +70,8 @@ background:red;
   text-decoration:none;
   color:white
 }
+
+/*----*/
 
 /* position */
 
@@ -83,5 +100,7 @@ background:red;
       margin-top:20px;
       margin-right:30px
 }
+
+/*---*/
 
 </style>
