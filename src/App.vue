@@ -1,4 +1,5 @@
 <template>
+<!-- for first page--->
   <div id="app">
     <navBar></navBar>
     <showingUp></showingUp>

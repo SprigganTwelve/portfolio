@@ -1,4 +1,5 @@
 <template>
+<!-- for all project--->
 <div id="app2">
   <homeIcon></homeIcon>
   <BoxCard></BoxCard>
@@ -19,8 +20,12 @@ export default {
 </script>
 
 <style>
+*{
+  overflow:hidden;
+}
 #app2{
-height:100%;
+background:#110E0E;
+height:100vh;
 overflow-y: auto;
 }
 </style>

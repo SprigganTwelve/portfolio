@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import App2 from './App2.vue'
+import App3 from './App3.vue'
 import router from './router'
 
 Vue.config.productionTip = false
@@ -37,4 +38,11 @@ new Vue({
   router,
   components: { App2 },
   template: '<App2/>'
+})
+
+new Vue({
+  el: '#app3',
+  router,
+  components: { App3 },
+  template: '<App3/>'
 })
