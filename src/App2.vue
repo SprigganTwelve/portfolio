@@ -1,7 +1,7 @@
 <template>
 <!-- for all project--->
 <div id="app2">
-  <homeIcon></homeIcon>
+  <homeIcon :color="colorIcon"></homeIcon>
   <BoxCard></BoxCard>
 </div>
 </template>
@@ -15,6 +15,14 @@ export default {
   components: {
     homeIcon,
     BoxCard
+  },
+  data () {
+    return {
+      colorIcon: {
+        'iswhite': true,
+        'isblack': false
+      }
+    }
   }
 }
 </script>

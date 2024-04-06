@@ -1,30 +1,28 @@
 <template>
-<!-- for alone project--->
-  <div id="app3">
+<!-- for alone skills page--->
+  <div id="app4">
     <homeIcon :color="colorIcon"></homeIcon>
-    <projectHeader></projectHeader>
-    <stack></stack>
+    <skills></skills>
   </div>
 </template>
 
 <script>
 
 import homeIcon from './components/homeIcon.vue'
-import projectHeader from './components/projectHeader.vue'
-import stack from './components/stack.vue'
+import skills from './components/skills.vue'
 
 export default {
-  name: 'App3',
+  name: 'App4',
   components: {
-    projectHeader,
     homeIcon,
-    stack
+    skills
   },
   data () {
     return {
+      // object for color of homeIcon
       colorIcon: {
-        'iswhite': true,
-        'isblack': false
+        'iswhite': false,
+        'isblack': true
       }
     }
   }
@@ -38,12 +36,10 @@ export default {
   text-decoration: none;
   margin:0;
   padding:0;
-  overflow:hidden
 }
 
-#app3{
+#app4{
   height:100vh;
-  background:black;
   overflow:auto;
   color:white;
 }

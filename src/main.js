@@ -4,6 +4,8 @@ import Vue from 'vue'
 import App from './App'
 import App2 from './App2.vue'
 import App3 from './App3.vue'
+import App4 from './App4.vue'
+import App5 from './App5.vue'
 import router from './router'
 
 Vue.config.productionTip = false
@@ -45,4 +47,18 @@ new Vue({
   router,
   components: { App3 },
   template: '<App3/>'
+})
+
+new Vue({
+  el: '#app4',
+  router,
+  components: { App4 },
+  template: '<App4/>'
+})
+
+new Vue({
+  el: '#app5',
+  router,
+  components: { App5 },
+  template: '<App5/>'
 })

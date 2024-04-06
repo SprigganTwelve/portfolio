@@ -88,8 +88,17 @@ export default {
   name: 'stack',
   data () {
     return {
-
+      move: {}
     }
+  },
+  mounted () {
+    // window.addEventListener('scroll', this.handleScroll)
+  },
+  methods: {
+    // handleScroll: function (event) {
+    //   let addSkills = document.querySelector('.stack-additional')
+    //   addSkills.innerHTML = '2'
+    // }
   }
 }
 

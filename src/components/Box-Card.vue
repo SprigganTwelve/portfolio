@@ -2,7 +2,7 @@
     <div  class="BoxCard mainBox">
         <div>
             <img  src="../assets/images/gojo.jpeg" class="BoxCard-img" alt="">
-            <span>Name</span>
+            <span v-rewrite>Name</span>
             <p>lodhdhdhdhdhdhddkdkkdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p>
         </div>
         <div>
