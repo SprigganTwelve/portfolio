@@ -6,6 +6,7 @@ import App2 from './App2.vue'
 import App3 from './App3.vue'
 import App4 from './App4.vue'
 import App5 from './App5.vue'
+import App6 from './App6.vue'
 import router from './router'
 
 Vue.config.productionTip = false
@@ -61,4 +62,11 @@ new Vue({
   router,
   components: { App5 },
   template: '<App5/>'
+})
+
+new Vue({
+  el: '#app6',
+  router,
+  components: { App6 },
+  template: '<App6/>'
 })

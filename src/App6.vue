@@ -1,30 +1,29 @@
 <template>
-<!--techno doc pages--->
-  <div id="app5">
+<!----->
+  <div id="app6">
     <homeIcon :color="colorIcon"></homeIcon>
-    <largeCard :color="colorDownloadIcon"></largeCard>
+    <aboutMe></aboutMe>
+    <graduate></graduate>
   </div>
 </template>
 
 <script>
 
 import homeIcon from './components/homeIcon.vue'
-import largeCard from './components/largeCard.vue'
+import aboutMe from './components/aboutMe.vue'
+import graduate from './components/graduate.vue'
 
 export default {
-  name: 'App5',
+  name: 'App6',
   components: {
     homeIcon,
-    largeCard
+    aboutMe,
+    graduate
   },
   data () {
     return {
       // object for color of homeIcon
       colorIcon: {
-        'iswhite': true,
-        'isblack': false
-      },
-      colorDownloadIcon: {
         'iswhite': true,
         'isblack': false
       }
@@ -42,10 +41,10 @@ export default {
   padding:0;
 }
 
-#app5{
+#app6{
   height:100vh;
   overflow:auto;
-  background:black;
   color:white;
+  background-color: black;
 }
 </style>
