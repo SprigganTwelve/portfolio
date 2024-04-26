@@ -1,5 +1,5 @@
 <template>
-  <div class="showingUp spaceBetween" :style="move" >
+  <div class="showingUp" :style="move" >
     <div class="showingUp-mainTrunck">
 
     <!--presentation--->
@@ -76,15 +76,16 @@ export default {
 }
 </script>
 
-<style >
+<style scoped>
 
 /*----glabal display (first and second items) -----*/
 
 .showingUp{
     display:flex;
     align-items:center;
+    justify-content: space-around;
     height:100%;
-    width:100%
+    width:100%;
 }
 
 .showingUp-mainTrunck {
@@ -103,14 +104,16 @@ export default {
     width: 30px;
     border-radius:50%;
 }
+
 .showingUp-imgProfil{
-   height:220px;
-   width:220px;
+   height:320px;
+   width:320px;
    border-radius:50%;
    margin-right:40px;
    margin-bottom:15px;
    object-fit:cover;
-   object-position:center
+   object-position:center;
+   background-attachment: fixed;
 }
 
 /*---------*/
@@ -123,7 +126,7 @@ export default {
   -webkit-background-clip: text;
   color: transparent;
   font-weight:bold;
-  transition: all 0.5;
+  transition: all 1;
 }
 
 .showingUp-mainTrunck .two{
@@ -132,11 +135,12 @@ export default {
     -webkit-background-clip: text;
     color: transparent;
     font-weight:bold;
-    transition: all 0.5;
+    transition: all 1.5;
 }
 
 .showingUp .three{
   margin-left: 200px;
+  transition: all 2.0;
 }
 
 .showingUp-mainTrunck .four{

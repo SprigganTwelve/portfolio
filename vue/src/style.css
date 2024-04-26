@@ -1,4 +1,4 @@
-:root {
+ :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -22,13 +22,13 @@ a:hover {
   color: #535bf2;
 }
 
-body {
+/* body {
   margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-}
+} */  /*issue with App3 here*/
 
 h1 {
   font-size: 3.2em;
@@ -46,22 +46,23 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
+
+
 button:hover {
   border-color: #646cff;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
+} 
 
 .card {
   padding: 2em;
 }
 
 #app {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
@@ -76,4 +77,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} 

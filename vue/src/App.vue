@@ -37,16 +37,16 @@ export default {
 }
 
 #app {
- font-family: RedHat;
- color:white;
- height:100vh;
-  background:url("assets/images/R.jpeg"); /*abstract-black-splat-grunge-brush-texture-free-vector.jpg*/
+  font-family: RedHat;
+  color:white;
+  background: url("assets/images/R.jpeg"); /*abstract-black-splat-grunge-brush-texture-free-vector.jpg*/
   height:100vh;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-
+  object-fit: cover;
+  width: 100%;
 }
 span{
   font-size: 30px;

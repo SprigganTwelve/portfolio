@@ -13,7 +13,7 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
 .homeIcon-box{
     width:100vh;
     position:absolute;

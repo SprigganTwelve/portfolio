@@ -36,7 +36,7 @@ export default {
     }
   },
   mounted () {
-    // moving of main trunck after mount
+    // moving of the main trunck after mounted
     setTimeout(() => {
       this.move.transition = 'all 2s ease'
       this.move.transform = 'translateY(0)'
@@ -46,8 +46,12 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 /* dealing with link/nav options */
+
+.navBar{
+  padding: 2rem;
+}
 
 .navBar #navBar-hoverOption {
   cursor:pointer;

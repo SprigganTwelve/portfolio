@@ -47,7 +47,7 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
 .BoxCard{
     display:flex;
     flex-wrap: wrap;
