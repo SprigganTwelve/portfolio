@@ -5,14 +5,21 @@ import App2 from './App2.vue'
 import App3 from './App3.vue'
 import App4 from './App4.vue'
 import App5 from './App5.vue'
-import App6 from './App6.vue'
 
-createApp(App).mount('#app')
-createApp(App2).mount('#app2')
-createApp(App3).mount('#app3')
-createApp(App4).mount('#app4')
-createApp(App5).mount('#app5')
-createApp(App6).mount('#app6')
+import App6 from './App6.vue'
+import mainRoutes from './routers.js'
+
+
+
+const app = createApp(App)
+app.mount('#app')
+app.use(mainRoutes)
+
+const app2 =  createApp(App2).mount('#app2')
+const app3 = createApp(App3).mount('#app3')
+const app4 = createApp(App4).mount('#app4')
+const app5 = createApp(App5).mount('#app5')
+const app6 = createApp(App6).mount('#app6')
 
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
