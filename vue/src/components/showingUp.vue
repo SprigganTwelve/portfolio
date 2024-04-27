@@ -1,5 +1,8 @@
 <template>
   <div class="showingUp" :style="move" >
+    
+    <img id="showingUp-backView" src="../assets/images/back.jpg" alt="">
+    
     <div class="showingUp-mainTrunck">
 
     <!--presentation--->
@@ -95,6 +98,14 @@ export default {
     font-size:25px
 }
 
+#showingUp-backView {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: -452;
+  object-fit: cover;
+  object-position: center;
+}
 /*---------*/
 
 /*---image setting */

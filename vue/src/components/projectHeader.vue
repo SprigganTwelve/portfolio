@@ -25,10 +25,6 @@ export default {
   gap:20px;
   margin-left:40px;
   margin-right:40px;
-  scrollbar-width: none; /*  Firefox 64+ */
-  scroll-behavior: smooth;
-  -ms-overflow-style: none; 
-  overflow: none;
 }
 
 .projectHeader::-webkit-scrollbar {

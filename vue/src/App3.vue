@@ -38,9 +38,6 @@ export default {
   background:black;
   overflow:auto;
   color:white;
-  scrollbar-width: none; /*  Firefox 64+ */
-  scroll-behavior: smooth;
-  -ms-overflow-style: none; 
 }
 
 #app3::-webkit-scrollbar {

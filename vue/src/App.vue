@@ -16,10 +16,11 @@
       <!--nav options-->
 
       <div class="inEnd " id="navBar-hoverOption">
+        <router-link class="routerLink" :to="{name: 'Home'}">Accueil</router-link>
           <router-link class="routerLink" :to="{name: 'veilles'}">Veilles Technologiques</router-link>
           <router-link class="routerLink" :to="{name: 'Competences'}">Compétences</router-link>
           <router-link class="routerLink" :to="{name: 'projets'}">Projets</router-link>
-          <router-link class="routerLink" :to="{name: 'About'}">About</router-link>
+          <router-link class="routerLink" :to="{name: 'About'}">A propos</router-link>
       </div>
 
   </div>

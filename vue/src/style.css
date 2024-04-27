@@ -18,7 +18,11 @@
   text-decoration: none;
   margin:0;
   padding:0;
-  overflow:hidden
+  overflow:hidden;
+  scrollbar-width: none; /*  Firefox 64+ */
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; 
+  overflow: none;
 }
 
 
