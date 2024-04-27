@@ -1,7 +1,7 @@
 <template>
 <!-- for all project--->
 <div id="app2">
-  <homeIcon :color="colorIcon"></homeIcon>
+  <!-- <homeIcon :color="colorIcon"></homeIcon> -->
   <BoxCard></BoxCard>
 </div>
 </template>
@@ -27,13 +27,15 @@ export default {
 }
 </script>
 
-<style>
-*{
-  overflow:hidden;
-}
+<style scoped>
+
 #app2{
 background:#110E0E;
 height:100vh;
 overflow-y: auto;
+}
+
+.navBar{
+  display: none;
 }
 </style>

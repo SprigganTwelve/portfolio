@@ -1,35 +1,51 @@
 <template>
 <!-- for first page--->
   <div id="app">
-    <navBar></navBar>
-    <showingUp></showingUp>
+    
+<!-- main trunck-->
+
+  <div class="navBar transitionSpan spaceBetween " :style="move">
+
+      <!-- circle -->
+
+      <div class = "inStart"  >
+            <div id = "rond" ></div>
+            <span v-rewrite>Portfolio</span>
+      </div>
+
+      <!--nav options-->
+
+      <div class="inEnd " id="navBar-hoverOption">
+          <router-link class="routerLink" :to="{name: 'veilles'}">Veilles Technologiques</router-link>
+          <router-link class="routerLink" :to="{name: 'Competences'}">Compétences</router-link>
+          <router-link class="routerLink" :to="{name: 'projets'}">Projets</router-link>
+          <router-link class="routerLink" :to="{name: 'About'}">About</router-link>
+      </div>
+
   </div>
+<!-------  -------->
+  
+    <router-view />
+  </div>
+
 </template>
 
 <script>
 
-import navBar from './components/navBar.vue'
+
 import showingUp from './components/showingUp.vue'
 // import './assets/styles/style.css'
 
 export default {
   name: 'App',
   components: {
-    navBar,
     showingUp
   }
 }
 </script>
 
-<style>
+<style scoped>
 
-*{
-  list-style-type: none;
-  text-decoration: none;
-  margin:0;
-  padding:0;
-  overflow:hidden
-}
 
 @font-face {
   font-family: RedHat;
@@ -39,7 +55,6 @@ export default {
 #app {
   font-family: RedHat;
   color:white;
-  background: url("assets/images/R.jpeg"); /*abstract-black-splat-grunge-brush-texture-free-vector.jpg*/
   height:100vh;
   background-position: center;
   background-attachment: fixed;
@@ -47,6 +62,7 @@ export default {
   background-size: cover;
   object-fit: cover;
   width: 100%;
+  overflow: auto;
 }
 span{
   font-size: 30px;
@@ -56,6 +72,69 @@ a{
   font-size: 20px;
 }
 
-/* General style   */
+/* -----------------  */
+/* dealing with link/nav options */
+
+.navBar{
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+}
+
+.navBar #navBar-hoverOption {
+  cursor:pointer;
+}
+.navBar #navBar-hoverOption *:hover  {
+  background:white;
+  color:red;
+  font-weight:bold;
+  padding:9px;
+  border-radius: 20px
+}
+.navBar > div #rond{
+padding:10px;
+height : 10px;
+width:10px;
+border-radius : 50%;
+background:red;
+}
+#navBar-hoverOption .routerLink{
+  text-decoration:none;
+  color:white
+}
+
+/*----*/
+
+/* position */
+
+.spaceBetween{
+    display:flex;
+    justify-content:space-between;
+}
+
+.spaceBetween > div {
+    display:flex;
+    justify-content:baseline;
+}
+
+.transitionSpan > div *:not(.rond){
+    transition: all 2s;
+}
+
+.inStart{
+      gap:5px;
+      margin-top:20px;
+      margin-left:30px
+}
+
+.inEnd{
+      gap:40px;
+      margin-top:20px;
+      margin-right:30px
+}
+
+/*---*/
 
 </style>
+

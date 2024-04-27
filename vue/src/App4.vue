@@ -1,7 +1,7 @@
 <template>
 <!-- for alone skills page--->
   <div id="app4">
-    <homeIcon :color="colorIcon"></homeIcon>
+    <!-- <homeIcon :color="colorIcon"></homeIcon> -->
     <skills></skills>
   </div>
 </template>
@@ -29,18 +29,12 @@ export default {
 }
 </script>
 
-<style>
-
-*{
-  /* list-style-type: none; */
-  text-decoration: none;
-  margin:0;
-  padding:0;
-}
+<style scoped>
 
 #app4{
   height:100vh;
   overflow:auto;
   color:white;
 }
+
 </style>

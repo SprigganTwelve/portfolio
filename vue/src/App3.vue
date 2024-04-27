@@ -1,7 +1,7 @@
 <template>
 <!-- for alone project--->
   <div id="app3">
-    <homeIcon :color="colorIcon"></homeIcon>
+    <!-- <homeIcon :color="colorIcon"></homeIcon> -->
     <projectHeader></projectHeader>
     <stack></stack>
   </div>
@@ -31,20 +31,21 @@ export default {
 }
 </script>
 
-<style>
-
-*{
-  /* list-style-type: none; */
-  text-decoration: none;
-  margin:0;
-  padding:0;
-  overflow:hidden
-}
+<style scoped>
 
 #app3{
   height:100vh;
   background:black;
   overflow:auto;
   color:white;
+  scrollbar-width: none; /*  Firefox 64+ */
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; 
 }
+
+#app3::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, et Opera */
+}
+
+
 </style>

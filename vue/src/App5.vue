@@ -1,7 +1,7 @@
 <template>
 <!--techno doc pages--->
   <div id="app5">
-    <homeIcon :color="colorIcon"></homeIcon>
+    <!-- <homeIcon :color="colorIcon"></homeIcon> -->
     <largeCard :color="colorDownloadIcon"></largeCard>
   </div>
 </template>
@@ -33,14 +33,7 @@ export default {
 }
 </script>
 
-<style>
-
-*{
-  /* list-style-type: none; */
-  text-decoration: none;
-  margin:0;
-  padding:0;
-}
+<style scoped>
 
 #app5{
   height:100vh;
@@ -48,4 +41,5 @@ export default {
   background:black;
   color:white;
 }
+
 </style>

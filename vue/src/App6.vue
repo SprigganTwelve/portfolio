@@ -1,14 +1,13 @@
 <template>
 <!----->
   <div id="app6">
-    <homeIcon :color="colorIcon"></homeIcon>
+    <!-- <homeIcon :color="colorIcon"></homeIcon> -->
     <aboutMe></aboutMe>
     <graduate></graduate>
   </div>
 </template>
 
 <script>
-
 import homeIcon from './components/homeIcon.vue'
 import aboutMe from './components/aboutMe.vue'
 import graduate from './components/graduate.vue'
@@ -32,19 +31,34 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
-*{
-  /* list-style-type: none; */
-  text-decoration: none;
-  margin:0;
-  padding:0;
-}
+
 
 #app6{
-  height:100vh;
-  overflow:auto;
+  height:110vh;
+  overflow:auto ! important;
   color:white;
   background-color: black;
+  padding: 20px;
+  scroll-behavior: smooth;
 }
+/* hidden scroll bar */
+
+/* sur WebKit-based browsers */
+#app6{
+  scrollbar-width: none; /*  Firefox 64+ */
+  -ms-overflow-style: none;  /* Internet Explorer et Edge */
+}
+
+#app6::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, et Opera */
+}
+
+
+/* .navBar{
+  display: none;
+} */
+
+
 </style>

@@ -13,10 +13,12 @@ export default {
 
 </script>
 
-<style scoped>
+<style >
+
 .homeIcon-box{
     width:100vh;
     position:absolute;
+    left: 20px;
 }
 
 /* color  */
@@ -40,4 +42,5 @@ export default {
     margin-bottom:15px;
     cursor:pointer
 }
+
 </style>

@@ -32,8 +32,16 @@ export default {
   position: relative;
   height:100%;
   color:black;
-  overflow:auto
+  overflow:auto;  
+  scrollbar-width: none; /*  Firefox 64+ */
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; 
 }
+
+#skills::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, et Opera */
+}
+
 
 #skills > span{
   display:flex;

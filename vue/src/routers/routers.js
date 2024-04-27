@@ -1,18 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import App from './App.vue'
-import App6 from './App6.vue'
-import App2 from './App2.vue'
-import App3 from './App3.vue'
-import App4 from './App4.vue'
-import App5 from './App5.vue'
-import NotFound from './NotFound.vue'
+import App6 from '../App6.vue'
+import App2 from '../App2.vue'
+import App3 from '../App3.vue'
+import App4 from '../App4.vue'
+import App5 from '../App5.vue'
+import NotFound from '../NotFound.vue'
+import showingUp from '../components/showingUp.vue'
 // there is also createWebHashHistory and createMemoryHistory
 
 const routes = [
     {
         path: '/',
         name: 'Home',
-        component: App
+        component: showingUp
     },
     { 
         path: '/about',
@@ -25,8 +25,8 @@ const routes = [
         component: App2
     },
     { 
-        path: '/stackTechnique',
-        name: 'stackTechnique',
+        path: '/Competences',
+        name: 'Competences',
         component: App4
     },
     { 
@@ -46,9 +46,9 @@ const routes = [
     }
 ]
 
-const mainRoutes = createRouter({
+const router = createRouter({
   history: createWebHistory(),
-  routes: routes
+  routes
 })
 
-export default mainRoutes
+export default router

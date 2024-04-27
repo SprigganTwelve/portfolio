@@ -14,10 +14,9 @@
     <!--nav options-->
 
     <div class="inEnd " id="navBar-hoverOption">
-        <a href='' >Veille Technologique</a>
-        <a href='./src/html/projets.html' >Projets</a>
-        <a href = '' >Compétences</a>
-        <a href ='' >A propos</a>
+        <!-- <a href='' >Veille Technologique</a> -->
+        <!-- <a href = '' >Compétences</a>
+        <a href ='' >A propos</a> -->
     </div>
 
   </div>
@@ -70,7 +69,7 @@ width:10px;
 border-radius : 50%;
 background:red;
 }
-#navBar-hoverOption a{
+#navBar-hoverOption .routerLink{
   text-decoration:none;
   color:white
 }

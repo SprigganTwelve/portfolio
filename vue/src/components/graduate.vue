@@ -26,12 +26,6 @@ export default {
 </script>
 
 <style>
-* {
-  /* list-style-type: none; */
-  text-decoration: none;
-  margin: 0;
-  padding: 0;
-}
 
 #graduate {
   position: relative;
