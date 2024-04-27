@@ -23,7 +23,7 @@ export default {
         'isblack': false
       }
     }
-  }
+  },
 }
 </script>
 

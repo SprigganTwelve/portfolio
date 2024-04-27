@@ -1,6 +1,6 @@
 <template>
     <div  class="BoxCard mainBox">
-        <div>
+        <div v-on:click="changeDirectory"  id="1">
             <img  src="../assets/images/calc.jpg" class="BoxCard-img" alt="">
             <h2 v-rewrite>PhoneCalc</h2>
             <p>
@@ -9,7 +9,7 @@
                 Ce projet reprend l'idée d'une calculatrice et de ses fonctions de calcule...
             </p>
         </div>
-        <div>
+        <div v-on:click="changeDirectory"  id="2" >
             <img src="../assets/images/company.jpg" class="BoxCard-img" alt="">
             <h2>profect For Company</h2>
             <p>
@@ -17,7 +17,7 @@
                 pour une entreprise fictive. Il s'agit de l'entreprise Infinit link. Cette...
             </p>
         </div>
-        <div>
+        <div v-on:click="changeDirectory"  id="3" >
             <img src="../assets/images/leboncote.jpg" class="BoxCard-img" alt="">
             <h2>LeBonCoté</h2>
             <p>
@@ -26,7 +26,7 @@
                 Autrement dit, LeBonCote... 
             </p>
         </div>
-        <div>
+        <div v-on:click="changeDirectory"   id="4" >
             <img src="../assets/images/biblio.jpg" class="BoxCard-img" alt="">
             <h2>BiBlio</h2>
             <p>
@@ -34,7 +34,7 @@
                 les utilisateurs ont la possibilité de rechercher des livres, de...
             </p>
         </div>
-        <div>
+        <div v-on:click="changeDirectory"   id="5" >
             <img src="../assets/images/meteo3.jpg" class="BoxCard-img" alt="">
             <h2>Meteo</h2>
             <p>
@@ -42,7 +42,7 @@
                 à l'aide d'une api fournit différentes  services utilisateurs...
             </p>
         </div>
-        <div>
+        <div v-on:click="changeDirectory"   id="6" >
             <img src="../assets/images/eshop.jpg" class="BoxCard-img" alt="">
             <h2>Eshop</h2>
             <p>
@@ -50,7 +50,7 @@
                 Eshop fournit de nombreux services utilisateurs variés. En effet...  
             </p>
         </div>
-        <div>
+        <div v-on:click="changeDirectory"  id="7" >
             <img src="../assets/images/dictionnary.jpg" class="BoxCard-img" alt="">
             <h2>Dictionnary</h2>
             <p>
@@ -58,7 +58,7 @@
                 Ce projet évolutif construit un model de dictionnaire anglais-anglais. il...
             </p>
         </div>
-        <div>
+        <div v-on:click="changeDirectory"  id="8" >
             <img src="../assets/images/meal.jpg" class="BoxCard-img" alt="">
             <h2>Meal</h2>
             <p>
@@ -78,6 +78,10 @@ export default {
     scale: function (scale) {
       let container = document.querySelector('.mainBox')
       container.style.transform = 'scale(' + scale + ')'
+    },
+    changeDirectory: function(event){
+        let newLocation = "http://localhost:5173/thisProject?id="+ event.target.parentElement.id
+        window.location.replace(newLocation)
     }
   }
 }

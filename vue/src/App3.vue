@@ -27,6 +27,9 @@ export default {
         'isblack': false
       }
     }
+  },  
+  created: function () {
+    let getParams = window.location.search[4]
   }
 }
 </script>
