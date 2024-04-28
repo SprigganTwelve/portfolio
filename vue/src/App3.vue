@@ -2,8 +2,8 @@
 <!-- for alone project--->
   <div id="app3">
     <!-- <homeIcon :color="colorIcon"></homeIcon> -->
-    <projectHeader></projectHeader>
-    <stack></stack>
+    <projectHeader :param="projectId"></projectHeader>
+    <stack :param="projectId"></stack>
   </div>
 </template>
 
@@ -25,11 +25,12 @@ export default {
       colorIcon: {
         'iswhite': true,
         'isblack': false
-      }
+      },
     }
   },  
-  created: function () {
+  beforeCreate: function () {
     let getParams = window.location.search[4]
+    this.projectId = getParams
   }
 }
 </script>

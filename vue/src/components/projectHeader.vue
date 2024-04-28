@@ -2,19 +2,33 @@
 <!-- for project's header--->
   <div class="projectHeader">
     <div>
-          <img src="../assets/images/gojoSatoru.jpeg" alt="">
+          <img @click="displayProject"  src="../assets/images/gojoSatoru.jpeg" alt="">
           <span>name</span>
     </div>
     <p  v-rewrite>
-        Description
+        Description {{ param }}
     </p>
   </div>
 </template>
 
 <script scoped>
 
+import axios from 'axios';
+
 export default {
-  name: 'projectHeader'
+  name: 'projectHeader',
+  props: ['param'],
+  methods: {
+    displayProject: function () {
+      axios.post("../../public/jsonContent/data.json")
+      .then((reponse)=>{
+        console.log('ok')
+      })
+      .catch((error)=>{
+
+      })
+    }
+  }
 }
 </script>
 
