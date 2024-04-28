@@ -2,11 +2,11 @@
 <!-- for project's header--->
   <div class="projectHeader">
     <div>
-          <img @click="displayProject"  src="../assets/images/gojoSatoru.jpeg" alt="">
-          <span>name</span>
+          <img id="projectImage" :src="image" alt="">
+          <span>{{ name }}</span>
     </div>
     <p  v-rewrite>
-        Description {{ param }}
+       {{ description }}
     </p>
   </div>
 </template>
@@ -18,11 +18,32 @@ import axios from 'axios';
 export default {
   name: 'projectHeader',
   props: ['param'],
+  data() {
+    return {
+      name: '',
+      image:'',
+      description:'',
+    }
+  },
+  beforeMount: function (){
+    this.displayProject()
+
+  },
+  mounted: function () {
+    let imageItem = document.getElementById("projectImage")
+    console.log(imageItem)
+  },
   methods: {
     displayProject: function () {
       axios.post("../../public/jsonContent/data.json")
-      .then((reponse)=>{
-        console.log('ok')
+      .then((resp)=>{
+        resp.data.forEach(element => {
+          if (element.id == this.param) {
+              this.name  = element.name
+              this.image = element.image
+              this.description = element.description
+          }
+        });
       })
       .catch((error)=>{
 

@@ -2,7 +2,7 @@
     {
         "id":"1",
         "name":"PhoneCalc",
-        "image":"C:\\Ecole\\webProjects\\portfolio\\vue\\src\\assets\\images\\calc.jpg",
+        "image":"src/assets/images/calc.jpg",
         "description":"  PhoneCalc est un projet multiplateforme accessible depuis le navigateur ou une application mobile. Ce projet reprend l'idée d'une calculatrice et de ses fonctions de calcule...",
         "stat":[
             {
@@ -22,7 +22,7 @@
     {
         "id":"2",
         "name":"profect For Company",
-        "image":"C:\\Ecole\\webProjects\\portfolio\\vue\\src\\assets\\images\\company.jpg",
+        "image":"src/assets/images/company.jpg",
         "description":"Ce projet reprend la réalisation d'un site web complet à multipage pour une entreprise fictive. Il s'agit de l'entreprise Infinit link. Cette...",
         "stat":[
             {
@@ -50,7 +50,7 @@
     {
         "id":"3",
         "name":"LeBonCoté",
-        "image":"C:\\Ecole\\webProjects\\portfolio\\vue\\src\\assets\\images\\leboncote.jpg",
+        "image":"src/assets/images/leboncote.jpg",
         "description":"LeBonCote est un projet basé sur la réalisation d'un site web du même nom (leboncote). Ce site web est une plateforme de partage d'article. Autrement dit, LeBonCote...",
         "stat":[
             {
@@ -74,7 +74,7 @@
     {
         "id":"4",
         "name":"BiBlio",
-        "image":"C:\\Ecole\\webProjects\\portfolio\\vue\\src\\assets\\images\\biblio.jpg",
+        "image":"src/assets/images/biblio.jpg",
         "description":"Un projet assez simple basé sur la réalisation d'un système de BiBliothèque où les utilisateurs ont la possibilité de rechercher des livres, de...",
         "stat":[
             {
@@ -98,7 +98,7 @@
     {
         "id":"5",
         "name":"Meteo",
-        "image":"C:\\Ecole\\webProjects\\portfolio\\vue\\src\\assets\\images\\meteo3.jpg",
+        "image":"src/assets/images/meteo3.jpg",
         "description":"Comme l'indique le titre, il s'agit ici de la réalisation d'une application météo, qui à l'aide d'une api fournit différentes  services utilisateurs...",
         "stat":[
             {
@@ -118,7 +118,7 @@
     {
         "id":"6",
         "name":"Eshop",
-        "image":"C:\\Ecole\\webProjects\\portfolio\\vue\\src\\assets\\images\\eshop.jpg",
+        "image":"src/assets/images/eshop.jpg",
         "description":"   Eshop est un projet basé sur le dévéloppement d'un site web de e-commerce. Eshop fournit de nombreux services utilisateurs variés. En effet...",
         "stat":[
             {
@@ -142,7 +142,7 @@
     {
         "id":"7",
         "name":"Dictionnary",
-        "image":"C:\\Ecole\\webProjects\\portfolio\\vue\\src\\assets\\images\\dictionnary.jpg",
+        "image":"src/assets/images/dictionnary.jpg",
         "description":"Dictionnary est un projet utilisant des services Api et des technologies variés. Ce projet évolutif construit un model de dictionnaire anglais-anglais. il...",
         "stat":[
             {
@@ -162,7 +162,7 @@
     {
         "id":"8",
         "name":"Meal",
-        "image":"C:\\Ecole\\webProjects\\portfolio\\vue\\src\\assets\\images\\meal.jpg",
+        "image":"src/assets/images/meal.jpg",
         "description":"Il s'agit ici  d'un projet de recettes en ligne. Ce projet fournit à l'aide de services Api, des conseils...",
         "stat":[
             {
