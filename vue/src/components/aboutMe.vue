@@ -2,12 +2,17 @@
 <!--- -->
   <div id="aboutMe">
     <p id="title">A propos</p>
-    <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <!--- espace insecables-->
-        Dali zouayobo ange paterne, passionné du développement informatique, décide de s'avenurer dans ce monde fantastique,
-        porteur de projets et d'inventions innovantes. Son but, acquérir une expérience et un savoir proffessionnel afin de pouvoir se parfaire et pouvoir
-        s'affirmer ainsi qu'apporter une aide moins que négligeable.
-    </p>
-      <button id="cv"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg>Mon Cv</button>
+    <div>
+        <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <!--- espace insecables-->
+          Dali zouayobo ange paterne, passionné du développement informatique, décide de s'avenurer dans ce monde fantastique,
+          porteur de projets et d'inventions innovantes. Son but, acquérir une expérience et un savoir proffessionnel afin de pouvoir se parfaire et pouvoir
+          s'affirmer ainsi qu'apporter une aide moins que négligeable.
+      </p>
+        <button id="cv"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg>Mon Cv</button>
+        <div>
+            <div id="map"></div>
+        </div>
+    </div>
     <div class="intership">
         <div>
             <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-120v-560h160v-160h400v320h160v400H520v-160h-80v160H120Zm80-80h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 320h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 480h80v-80h-80v80Zm0-160h80v-80h-80v80Z"/></svg>
@@ -20,13 +25,29 @@
 
 <script>
 
+import 'leaflet/dist/leaflet.css';
+import L from 'leaflet';
+
 export default {
   name: 'graduate',
-
+  components: {
+  },
   data () {
     return {
-      // object for color of homeIcon
 
+    }
+  },
+  mounted: function () {
+    this.createMap()
+  },
+  methods: {
+    createMap: function (){
+      var map = L.map('map').setView([51.505, -0.09], 13);//get map with geographic coordonate and zoom level
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 19,
+          attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      }).addTo(map);
+      var marker = L.marker([51.5, -0.09]).addTo(map); // for adding a marker to our map
     }
   }
 }
@@ -56,17 +77,21 @@ export default {
     font-weight: bold;
 }
 
-#aboutMe > p {
+#aboutMe  p {
     padding-top:0;
     width: 900px;
 }
 
-#aboutMe #cv{
+/* #aboutMe > div {
+  width: 100%;
+} */
+
+#aboutMe > div > #cv{
   margin-left: 80%;
   display: flex;
 }
 
-#aboutMe #cv > svg {
+#aboutMe > div > #cv > svg {
   fill: white;
 }
 
