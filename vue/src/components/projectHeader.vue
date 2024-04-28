@@ -27,9 +27,9 @@ export default {
   },
   beforeMount: function (){
     this.displayProject()
-
   },
   mounted: function () {
+    //debug : see variable content at mounted event
     let imageItem = document.getElementById("projectImage")
     console.log(imageItem)
   },

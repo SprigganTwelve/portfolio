@@ -5,17 +5,19 @@
         "image":"src/assets/images/calc.jpg",
         "description":"  PhoneCalc est un projet multiplateforme accessible depuis le navigateur ou une application mobile. Ce projet reprend l'idée d'une calculatrice et de ses fonctions de calcule...",
         "stat":[
+            
             {
-                "name":"Html",
-                "pourcent":"60"
+                "name":"css",
+                "percent":{"width": "10%"}
             },
             {
-                "name":"js",
-                "pourcent":"30"
+                "name":"Html",
+                "percent":{"width": "60%"}
             },
             {
                 "name":"css",
-                "pourcent":"10"
+                "percent":{"width": "30%"}
+
             }
         ]
     },
@@ -27,23 +29,23 @@
         "stat":[
             {
                 "name":"Html",
-                "pourcent":"15"
+                "percent":{"width": "15%"}
             },
             {
                 "name":"js",
-                "pourcent":"20.9"
+                "percent":{"width": "29.9%"}
             },
             {
                 "name":"php",
-                "pourcent":"16.6"
+                "percent":{"width": "16.6%"}
             },
             {
                 "name":"css",
-                "pourcent":"33.6"
+                "percent":{"width": "33.6%"}
             },
             {
                 "name":"hash",
-                "pourcent":"13.9"
+                "percent":{"width": "13.9%"}
             }
         ]
     },
@@ -55,19 +57,19 @@
         "stat":[
             {
                 "name":"php",
-                "pourcent":"50.9"
+                "percent":{"width": "59.9%"}
             },
             {
                 "name":"js",
-                "pourcent":"13.3"
+                "percent":{"width": "13.3%"}
             },
             {
                 "name":"css",
-                "pourcent":"32.2"
+                "percent":{"width": "32.2%"}
             },
             {
                 "name":"hash",
-                "pourcent":"3.7"
+                "percent":{"width": "3.7%"}
             }
         ]
     },
@@ -79,19 +81,19 @@
         "stat":[
             {
                 "name":"php",
-                "pourcent":"49.4"
+                "percent":{"width": "49.4%"}
             },
             {
                 "name":"js",
-                "pourcent":"30.7"
+                "percent":{"width": "30.7%"}
             },
             {
                 "name":"css",
-                "pourcent":"19.1"
+                "percent":{"width": "19.1%"}
             },
             {
                 "name":"hash",
-                "pourcent":"0.8"
+                "percent":{"width": "0.8%"}
             }
         ]
     },
@@ -103,15 +105,15 @@
         "stat":[
             {
                 "name":"Html",
-                "pourcent":"32.5"
+                "percent":{"width": "32.5%"}
             },
             {
                 "name":"js",
-                "pourcent":"49.5"
+                "percent":{"width": "49.5%"}
             },
             {
                 "name":"css",
-                "pourcent":"17.8"
+                "percent":{"width": "17.8%"}
             }
         ]
     },
@@ -123,19 +125,19 @@
         "stat":[
             {
                 "name":"php",
-                "pourcent":"80.3"
+                "percent":{"width": "80.3%"}
             },
             {
                 "name":"js",
-                "pourcent":"1.8"
+                "percent":{"width": "1.8%"}
             },
             {
                 "name":"css",
-                "pourcent":"17.4"
+                "percent":{"width": "17.4%"}
             },
             {
                 "name":"hash",
-                "pourcent":"0.5"
+                "percent":{"width": "0.5%"}
             }
         ]
     },
@@ -147,15 +149,15 @@
         "stat":[
             {
                 "name":"Html",
-                "pourcent":"15.3"
+                "percent":{"width": "15.3%"}
             },
             {
                 "name":"js",
-                "pourcent":"53.7"
+                "percent":{"width": "53.7%"}
             },
             {
                 "name":"css",
-                "pourcent":"27.4"
+                "percent":{"width": "27.4%"}
             }
         ]
     },
@@ -167,15 +169,15 @@
         "stat":[
             {
                 "name":"Html",
-                "pourcent":"29.5"
+                "percent":{"width": "29.5%"}
             },
             {
-                "name":"Js",
-                "pourcent":"60.2"
+                "name":"js",
+                "percent":{"width": "60.2%"}
             },
             {
                 "name":"css",
-                "pourcent":"21.3"
+                "percent":{"width": "21.3%"}
             }
         ]
     }

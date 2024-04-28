@@ -4,58 +4,16 @@
 
     <!--stack : language elements--->
 
-      <div>
-
-          <div class="stack-technique">
-              <div class="language">
-                <div class="type">
-                  <span v-rewrite>html</span>
-                  <span  v-rewrite >advanced</span>
-                </div>
-                <div class="gauge"><div id="color1">color</div></div>
-              </div>
-          </div>
-
-          <div class="stack-technique">
-              <div class="language">
-                <div class="type">
-                  <span  v-rewrite>css</span>
-                  <span  v-rewrite>advanced</span>
-                </div>
-                <div class="gauge"><div id="color2">color</div></div>
-              </div>
-          </div>
-
-          <div class="stack-technique">
-              <div class="language">
-                <div class="type">
-                  <span  v-rewrite>js</span>
-                  <span  v-rewrite>advanced</span>
-                </div>
-                <div class="gauge"><div id="color3">color</div></div>
-              </div>
-          </div>
-
-          <div class="stack-technique">
-              <div class="language">
-                <div class="type">
-                  <span  v-rewrite>php</span>
-                  <span  v-rewrite>regular</span>
-                </div>
-                <div class="gauge"><div id="color4">color</div></div>
-              </div>
-          </div>
-
-          <div class="stack-technique">
-              <div class="language">
-                <div class="type">
-                  <span  v-rewrite>vue js</span>
-                  <span  v-rewrite>begginer</span>
-                </div>
-                <div class="gauge"><div id="color5">color</div></div>
-              </div>
-          </div>
-
+      <div id="el" >
+                 <div v-for="item in projectData.stat" class="stack-technique">
+                      <div class="language">
+                          <div class="type">
+                            <span >{{ item.name }}</span>
+                            <span >advanced</span>
+                          </div>
+                          <div class="gauge"><div  class="color1" :style="item.percent" >color</div></div>
+                        </div>
+                  </div>
       </div>
 
     <!--stack: additionnal element--->
@@ -83,22 +41,46 @@
 </template>
 
 <script>
+import axios from 'axios';
 
 export default {
   name: 'stack',
+  props: ['param'],
   data () {
     return {
-      move: {}
+      move: {}, //for animation
+      projectData:{},
     }
-  },
-  mounted () {
-    // window.addEventListener('scroll', this.handleScroll)
+  },  
+
+  mounted: function() {
+   this.getData()
   },
   methods: {
-    // handleScroll: function (event) {
-    //   let addSkills = document.querySelector('.stack-additional')
-    //   addSkills.innerHTML = '2'
-    // }
+    // gaugeColor: function (){
+    //   let Allgauge = document.querySelectorAll('.percent')
+    //   console.log(Allgauge)
+    // },
+    getData: function () {
+      axios.post("../../public/jsonContent/data.json")
+      .then((resp)=>{
+
+        let stackParent = document.getElementById('el')
+        console.log(stackParent)
+        // stackParent.style.color = red
+        resp.data.forEach(element => {
+          if (element.id == this.param) {
+            this.projectData = element
+            console.log(this.projectData)  
+            
+          }    
+        });
+      })
+      .catch((error)=>{
+
+      })
+
+    }
   }
 }
 
@@ -141,47 +123,15 @@ export default {
 
 /*gauge percent */
 
-.stack-technique .language > .gauge > #color1 {
-  width:60%;
+.stack-technique .language > .gauge > .color1 {
+  width: 0%;
   background-image: linear-gradient(to right,#13ADC7, #6978D1,#945DD6);
   border-radius:20px;
-  color:transparent
+  color:transparent;
+  transition: all 1.3ms ease;
 }
 
-.stack-technique .language > .gauge > #color2{
-  width:80%;
-  background-image: linear-gradient(to right,#13ADC7, #6978D1,#945DD6);
-  border-radius:20px;
-  color:transparent
-}
 
-.stack-technique .language > .gauge > #color2{
-  width:70%;
-  background-image: linear-gradient(to right,#13ADC7, #6978D1,#945DD6);
-  border-radius:20px;
-  color:transparent
-}
-
-.stack-technique .language > .gauge > #color3{
-  width:30%;
-  background-image: linear-gradient(to right,#13ADC7, #6978D1,#945DD6);
-  border-radius:20px;
-  color:transparent
-}
-
-.stack-technique .language > .gauge > #color4{
-  width:60%;
-  background-image: linear-gradient(to right,#13ADC7, #6978D1,#945DD6);
-  border-radius:20px;
-  color:transparent
-}
-
-.stack-technique .language > .gauge > #color5 {
-  width:10%;
-  background-image: linear-gradient(to right,#13ADC7, #6978D1,#945DD6);
-  border-radius:20px;
-  color:transparent
-}
 
 /*-----------*/
 
@@ -223,5 +173,11 @@ li::marker{
 }
 
 /*-----------*/
+
+/*-----experiences------*/
+
+.exp{
+  color: red !important;
+}
 
 </style>
