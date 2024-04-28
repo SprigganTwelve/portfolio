@@ -1,17 +1,29 @@
 <template>
 <!-- present--->
   <div id="largeCard">
-        <div>
-            <img src="../assets/images/gojo.jpeg" alt="">
-            <span>Name</span>
-            <svg :class="color" xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30"><path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg>
+
+        <div class="atEnd">
+            <div>
+                <img src="../assets/images/sat7.jpg" alt="">
+                <span>Name</span>
+                <svg :class="color" xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30"><path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg>
+            </div>
+        </div>
+        <div class="inMidle" >
+            <div>
+                <img src="../assets/images/gojo1.jpg" alt="">
+                <span>Name</span>
+                <svg :class="color" xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30"><path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg>
+            </div>
+        </div>
+        <div class="atFirst" >
+            <div >
+                <img  src="../assets/images/gojo2.jpg" alt="">
+                <span>Name</span>
+                <svg :class="color" xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30"><path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg>
+            </div>
         </div>
 
-        <div>
-            <img src="../assets/images/okotsu.jpg" alt="">
-            <span>Name</span>
-            <svg :class="color" xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30"><path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg>
-        </div>
   </div>
 </template>
 
@@ -23,7 +35,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 /*----position---*/
 
 #largeCard {
@@ -32,31 +44,48 @@ export default {
     justify-content: center;
     align-items: center;
     gap: 30px;
-    padding:50px;
+    padding:30px;
 }
 
-#largeCard > div {
-    position: relative;
-    height:200px;
-    width:100%;
-    border-radius: 20px
+#largeCard  div > img {
+    border-radius: 30px;
 }
 
-#largeCard > div > img {
+#largeCard > .atEnd {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+#largeCard > .atFirst {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+}
+
+#largeCard > div >div > img {
     object-fit:cover;
     object-position:center;
-    width:100%;
-    height:300px;
+    width:700px;
+    height:330px;
+    border: none;
+
 }
 
-#largeCard > div > span {
+
+#largeCard > div >div > span {
     position:absolute;
     z-index:9999;
     bottom:5px;
     left:30px;
 }
 
-#largeCard > div > svg{
+#largeCard > div> div {
+    position: relative;
+    width:700px;
+}
+
+#largeCard > div> div > svg{
     position:absolute;
     z-index:9999;
     bottom:5px;
@@ -65,6 +94,8 @@ export default {
 }
 
 /*-----color---*/
+
+/*---- Svg -color---*/
 
 .iswhite{
     fill:black;
@@ -87,10 +118,16 @@ export default {
     cursor:pointer
 }
 
-#largeCard > div >  svg:hover{
+#largeCard > div > div>  svg:hover{
  background:red;
  fill:white
 }
 /*--------*/
+
+/*-----border card Color ---*/
+
+.atEnd >div  {
+}
+
 
 </style>

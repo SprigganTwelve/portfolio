@@ -2,7 +2,13 @@
 <!-- for project's header--->
   <div class="projectHeader">
     <div>
-          <img id="projectImage" :src="image" alt="">
+          <div id="boxImage">
+            <img id="projectImage" :src="image" alt="">
+            <div class="projectHeader-imgIcon">
+              <img class="projecticon" id="githubIcon" src="../assets/images/github-icon-24.jpg" alt="gitHub">
+              <svg class="projecticon" id="downloadIcon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg>
+            </div>
+          </div>
           <span>{{ name }}</span>
     </div>
     <p  v-rewrite>
@@ -81,14 +87,50 @@ export default {
   border-bottom: 1px solid white;
 }
 
-.projectHeader > div img {
-  height:200px;
+.projectHeader > div >  #boxImage {
+  position: relative;
+  width: fit-content;
+  height:230px;
+  width: 100%;
+}
+
+.projectHeader > div >  #boxImage > #projectImage {
+  width: 100%;
   border-radius:20px;
-  object-fit:cover !important;
-  object-position:center;
+  object-fit:cover ;
+  object-position:center ;
 }
 
 .projectHeader > div span{
   padding-left:70px
 }
+
+.projectHeader-imgIcon{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+
+.projecticon{
+  border-radius:50%;
+  height:30px;
+  width: 30px;
+  object-fit: contain;
+  cursor: pointer;
+  margin: 5px;
+}
+
+#githubIcon{
+  border: 5px solid white;
+  outline: none;
+}
+
+#downloadIcon{
+  background-color: red;
+  fill: white;
+  padding: 10px;
+
+}
+
 </style>

@@ -81,6 +81,7 @@ a{
   padding-left: 2rem;
   padding-right: 2rem;
   padding-bottom: 1rem;
+  background-color: black;
 }
 
 .navBar #navBar-hoverOption {
