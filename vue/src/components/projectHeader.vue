@@ -84,7 +84,7 @@ export default {
 .projectHeader > div img {
   height:200px;
   border-radius:20px;
-  object-fit:cover;
+  object-fit:cover !important;
   object-position:center;
 }
 

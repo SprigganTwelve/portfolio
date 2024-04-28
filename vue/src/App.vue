@@ -9,7 +9,7 @@
       <!-- circle -->
 
       <div class = "inStart"  >
-            <div id = "rond" ></div>
+            <img src="../src/assets/images/rond.jpg" id="rond" alt="">
             <span v-rewrite>Portfolio</span>
       </div>
 
@@ -94,11 +94,9 @@ a{
   border-radius: 20px
 }
 .navBar > div #rond{
-padding:10px;
-height : 10px;
-width:10px;
+height : 40px;
+width:40px;
 border-radius : 50%;
-background:red;
 }
 #navBar-hoverOption .routerLink{
   text-decoration:none;
