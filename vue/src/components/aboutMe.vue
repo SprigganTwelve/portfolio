@@ -10,7 +10,7 @@
       </p>
         <button id="cv"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg>Mon Cv</button>
         <div>
-            <div id="map"></div>
+           <span>Ma localisation ?</span>
         </div>
     </div>
     <div class="intership">
@@ -38,17 +38,9 @@ export default {
     }
   },
   mounted: function () {
-    this.createMap()
   },
   methods: {
-    createMap: function (){
-      var map = L.map('map').setView([51.505, -0.09], 13);//get map with geographic coordonate and zoom level
-      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          maxZoom: 19,
-          attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-      }).addTo(map);
-      var marker = L.marker([51.5, -0.09]).addTo(map); // for adding a marker to our map
-    }
+
   }
 }
 </script>
