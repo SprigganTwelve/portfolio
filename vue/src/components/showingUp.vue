@@ -138,6 +138,7 @@ export default {
   color: transparent;
   font-weight:bold;
   transition: all 1;
+  font-size: 2rem;
 }
 
 .showingUp-mainTrunck .two{
@@ -147,11 +148,13 @@ export default {
     color: transparent;
     font-weight:bold;
     transition: all 1.5;
+    font-size: 3rem;
 }
 
 .showingUp .three{
   margin-left: 200px;
   transition: all 2.0;
+  font-size: 2rem;
 }
 
 .showingUp-mainTrunck .four{

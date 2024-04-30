@@ -21,6 +21,7 @@
       <div class="stack-additional">
 
               <span>Technologies et compétences additionnel</span>
+              
               <ul>
                   <ul>
                     <li  v-rewrite>- git</li>

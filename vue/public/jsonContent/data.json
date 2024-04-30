@@ -19,7 +19,8 @@
                 "percent":{"width": "30%"}
 
             }
-        ]
+        ],
+        "additionnalSkill": ["github","'Dbz","one piece"," js"]
     },
     {
         "id":"2",

@@ -52,7 +52,7 @@ export default {
         });
       })
       .catch((error)=>{
-
+         console.log("error of connexion : "+error)
       })
     }
   }
