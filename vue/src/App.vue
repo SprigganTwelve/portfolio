@@ -65,7 +65,7 @@ export default {
   width: 100%;
   overflow: auto;
 }
-span{
+.inStart span{
   font-size: 30px;
 }
 

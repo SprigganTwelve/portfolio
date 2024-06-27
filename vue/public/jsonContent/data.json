@@ -3,7 +3,9 @@
         "id":"1",
         "name":"PhoneCalc",
         "image":"src/assets/images/calc.jpg",
-        "description":"  PhoneCalc est un projet multiplateforme accessible depuis le navigateur ou une application mobile. Ce projet reprend l'idée d'une calculatrice et de ses fonctions de calcule...",
+        "httpGitHub":"https://github.com/SprigganTwelve/phonecalc",
+        "description":"Ce projet consiste en la création d'une calculatrice web interactive capable de réaliser des opérations mathématiques de base telles que l'addition, la soustraction, la multiplication et la division. Le but de ce projet était de renforcer mes compétences en développement front-end, en utilisant HTML, CSS et JavaScript pour construire une application web fonctionnelle et esthétique.",
+
         "stat":[
             
             {
@@ -20,13 +22,21 @@
 
             }
         ],
-        "additionnalSkill": ["github","'Dbz","one piece"," js"]
+        "fonctionnality":["Interface utilisateur simple et intuitive.","Support des opérations mathématiques de base : addition, soustraction, multiplication, division..","Gestion des erreurs (ex : division par zéro).","Historique des calculs réalisés pendant la session.","Réactivité de l'interface grâce à l'utilisation du CSS et JavaScript."],
+
+        "technDetails": ["HTML : Utilisation de balises sémantiques pour structurer la page, incluant une section pour l'affichage des résultats et une grille de boutons pour les chiffres et les opérations.","CSS : Utilisation de Flexbox pour la mise en page des boutons et de l'affichage. Styles CSS pour une apparence moderne et réactive.","JavaScript : Script pour capturer les clics sur les boutons, réaliser les opérations mathématiques et mettre à jour l'affichage des résultats. Gestion des erreurs et validation des entrées."]
+        ,
+        "additionnalSkill": [
+            ["github","'Visual Studio code"],
+          []
+        ]
     },
     {
         "id":"2",
-        "name":"profect For Company",
+        "name":"project For Company",
         "image":"src/assets/images/company.jpg",
-        "description":"Ce projet reprend la réalisation d'un site web complet à multipage pour une entreprise fictive. Il s'agit de l'entreprise Infinit link. Cette...",
+        "httpGitHub":"https://github.com/SprigganTwelve/project-for-company",
+        "description":"Infinit link  est une entreprise fictive spécialisée dans la vente de données par connexion satellite. L'objectif principal du projet est de créer un site web moderne et informatif qui présente les services de l'entreprise, explique les avantages de ses solutions basées sur les données satellite, et facilite le contact avec les clients potentiels.",
         "stat":[
             {
                 "name":"Html",
@@ -48,13 +58,18 @@
                 "name":"hash",
                 "percent":{"width": "13.9%"}
             }
-        ]
+        ],        
+         "fonctionnality":["Formulaire de contact pour demandes de devis et informations.", "Offres d'abonnement mensuel ou annuel pour l'accès régulier aux données satellite.","Packages personnalisables en fonction des besoins spécifiques des clients (volume de données, fréquence de mise à jour, etc.)."],
+
+        "technDetails": ["Utilisation de HTML5 et de balises sémantiques pour la structure du contenu web accessible.","CSS3 avec Flexbox et Grid pour un design responsive et une mise en page flexible.","JavaScript pour l'interactivité utilisateur, y compris la manipulation DOM et les appels aux APIs backend.","Utilisation de Git pour la gestion de version et la collaboration d'équipe, avec GitHub pour le stockage distant du code source."]
+        
     },
     {
         "id":"3",
         "name":"LeBonCoté",
+        "httpGitHub":"https://github.com/SprigganTwelve/LeBonCote-publication-d-annonce-",
         "image":"src/assets/images/leboncote.jpg",
-        "description":"LeBonCote est un projet basé sur la réalisation d'un site web du même nom (leboncote). Ce site web est une plateforme de partage d'article. Autrement dit, LeBonCote...",
+        "description":"LeBonCote est un projet ambitieux visant à créer une plateforme dynamique de partage d'articles en ligne. Conçu pour offrir une expérience utilisateur immersive et intuitive, LeBonCote permet aux utilisateurs de publier, découvrir et interagir avec une diversité d'articles sur des sujets variés. ",
         "stat":[
             {
                 "name":"php",
@@ -72,13 +87,17 @@
                 "name":"hash",
                 "percent":{"width": "3.7%"}
             }
-        ]
+        ],
+        "fonctionnality":["Publication d'Articles : Interface intuitive pour rédiger et formater des articles avec des outils de mise en page avancés.", "Gestion de Profil Utilisateur : Possibilité de créer et de personnaliser un profil utilisateur, incluant des informations biographiques et des liens vers les réseaux sociaux.","recherche d'article"],
+
+        "technDetails": ["Frontend : HTML5, CSS3, JavaScript", "Base de Données : MariaDB pour le stockage flexible des données utilisateur, des articles et des interactions."]
     },
     {
         "id":"4",
         "name":"BiBlio",
         "image":"src/assets/images/biblio.jpg",
-        "description":"Un projet assez simple basé sur la réalisation d'un système de BiBliothèque où les utilisateurs ont la possibilité de rechercher des livres, de...",
+        "httpGitHub":"https://github.com/SprigganTwelve/biblio",
+        "description":"Un projet assez simple basé sur la réalisation d'un système de BiBliothèque où les utilisateurs ont la possibilité de rechercher des livres.",
         "stat":[
             {
                 "name":"php",
@@ -96,13 +115,17 @@
                 "name":"hash",
                 "percent":{"width": "0.8%"}
             }
-        ]
+        ],
+        "fonctionnality":["Les utilisateurs peuvent créer un compte personnel pour gérer leur propre collection de livres.", "Fonctionnalités telles que l'ajout de livres à une liste de souhaits, la gestion des emprunts et des retours, ainsi que la notation et les critiques des livres lus.","Recherche de Livres : Barre de recherche permettant des recherches rapides et avancées par titre, auteur, genre, etc.","Gestion de Collection : Outils de gestion pour organiser les livres lus, les favoris et les listes de souhaits."],
+
+        "technDetails": ["Frontend : HTML5, CSS3, JavaScript", "Base de Données : MariaDB pour le stockage flexible des données utilisateur, des articles et des interactions.","API service :Une API CRUD pour la récupêration des informations sur les livres."]
     },
     {
         "id":"5",
         "name":"Meteo",
+        "httpGitHub":"https://github.com/SprigganTwelve/Meteo",
         "image":"src/assets/images/meteo3.jpg",
-        "description":"Comme l'indique le titre, il s'agit ici de la réalisation d'une application météo, qui à l'aide d'une api fournit différentes  services utilisateurs...",
+        "description":"MétéoApp vise à offrir une expérience utilisateur fluide et enrichissante en fournissant des informations météorologiques précises et pertinentes, adaptées aux besoins et aux préférences individuelles des utilisateurs, que ce soit sur desktop ou sur mobile.",
         "stat":[
             {
                 "name":"Html",
@@ -116,13 +139,17 @@
                 "name":"css",
                 "percent":{"width": "17.8%"}
             }
-        ]
+        ],
+        "fonctionnality":["Localisation Automatique : Détection automatique de la position actuelle de l'utilisateur pour fournir des prévisions météorologiques précises.","Recherche de Lieux : Capacité à rechercher et sélectionner d'autres emplacements pour obtenir les prévisions météorologiques.","API service: utilisation d'une api fournissant des information sur la méteo en temps réel"],
+
+        "technDetails": ["Frontend : HTML5, CSS3, JavaScript "]
     },
     {
         "id":"6",
         "name":"Eshop",
         "image":"src/assets/images/eshop.jpg",
-        "description":"   Eshop est un projet basé sur le dévéloppement d'un site web de e-commerce. Eshop fournit de nombreux services utilisateurs variés. En effet...",
+        "httpGitHub":"https://github.com/SprigganTwelve/Eshop",
+        "description":"Ce projet Eshop vise à fournir une expérience de commerce électronique fluide et intuitive pour les utilisateurs, en mettant l'accent sur la facilité d'utilisation, la sécurité des transactions et le support client efficace.",
         "stat":[
             {
                 "name":"php",
@@ -140,13 +167,18 @@
                 "name":"hash",
                 "percent":{"width": "0.5%"}
             }
-        ]
+        ],
+
+        "fonctionnality":["Interface de connexion sécurisée pour les utilisateurs enregistrés afin d'accéder à leur compte personnel.","Possibilité de création de compte pour les nouveaux utilisateurs avec gestion des informations personnelles.","Système de panier virtuel permettant aux utilisateurs d'ajouter des produits qu'ils souhaitent acheter.","Possibilité pour les utilisateurs de parcourir une liste complète de tous les produits disponibles sur la plateforme."],
+
+        "technDetails": ["Frontend : HTML5, CSS3, JavaScript "]
     },
     {
         "id":"7",
         "name":"Dictionnary",
         "image":"src/assets/images/dictionnary.jpg",
-        "description":"Dictionnary est un projet utilisant des services Api et des technologies variés. Ce projet évolutif construit un model de dictionnaire anglais-anglais. il...",
+        "httpGitHub":"https://github.com/SprigganTwelve/Dictionary",
+        "description":"Dictionnary s'engage à fournir une ressource linguistique robuste et évolutive pour les amateurs de langue anglaise, en facilitant l'accès à des informations précises et détaillées sur les mots et leur usage, tout en offrant une expérience utilisateur enrichissante et éducative.",
         "stat":[
             {
                 "name":"Html",
@@ -160,26 +192,11 @@
                 "name":"css",
                 "percent":{"width": "27.4%"}
             }
-        ]
-    },
-    {
-        "id":"8",
-        "name":"Meal",
-        "image":"src/assets/images/meal.jpg",
-        "description":"Il s'agit ici  d'un projet de recettes en ligne. Ce projet fournit à l'aide de services Api, des conseils...",
-        "stat":[
-            {
-                "name":"Html",
-                "percent":{"width": "29.5%"}
-            },
-            {
-                "name":"js",
-                "percent":{"width": "60.2%"}
-            },
-            {
-                "name":"css",
-                "percent":{"width": "21.3%"}
-            }
-        ]
+        ],
+
+        "fonctionnality":["Recherche de Mots : Barre de recherche permettant aux utilisateurs de trouver rapidement la définition et les autres informations pertinentes sur un mot spécifique.","API et Sources Externes : Utilisation d'API pour enrichir la base de données avec des informations actualisées et complètes sur les mots et leur utilisation."],
+
+        "technDetails": ["Frontend : HTML5, CSS3, JavaScript "]
     }
+
 ]

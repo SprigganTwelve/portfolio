@@ -58,14 +58,14 @@
                 Ce projet évolutif construit un model de dictionnaire anglais-anglais. il...
             </p>
         </div>
-        <div v-on:click="changeDirectory"  id="8" >
+        <!-- <div v-on:click="changeDirectory"  id="8" >
             <img src="../assets/images/meal.jpg" class="BoxCard-img" alt="">
             <h2>Meal</h2>
             <p>
                 Il s'agit ici  d'un projet de recettes en ligne.
                 ce projet fournit à l'aide de services Api, des conseils...
             </p>
-        </div>
+        </div> -->
 
     </div>
 </template>

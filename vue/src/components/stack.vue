@@ -1,6 +1,6 @@
 <template>
 <!-- for project's header--->
-  <div  class="stack" :style= "move">
+  <div  class="stack" :style= "moved">
 
     <!--stack : language elements--->
 
@@ -16,23 +16,23 @@
                   </div>
       </div>
 
+      <div class="spacer"></div>
     <!--stack: additionnal element--->
 
       <div class="stack-additional">
 
-              <span>Technologies et compétences additionnel</span>
+              <span>Technologies et compétences additionnelles</span>
               
               <ul>
                   <ul>
                     <li  v-rewrite>- git</li>
                     <li  v-rewrite>- vs-Code</li>
-                    <li  v-rewrite>- quick learning</li>
                   </ul>
-                  <ul>
+                  <!-- <ul>
                     <li  v-rewrite>- git</li>
                     <li  v-rewrite>- vs-Code</li>
                     <li  v-rewrite>- quick learning</li>
-                  </ul>
+                  </ul> -->
               </ul>
 
       </div>
@@ -49,7 +49,7 @@ export default {
   props: ['param'],
   data () {
     return {
-      move: {}, //for animation
+      moved: {}, //for animation
       projectData:{},
     }
   },  
@@ -179,6 +179,10 @@ li::marker{
 
 .exp{
   color: red !important;
+}
+
+.spacer {
+  height: 50px;
 }
 
 </style>

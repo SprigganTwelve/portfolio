@@ -14,13 +14,13 @@
     <!--link image--->
 
         <div ref="boxImage" class = "four">
-            <img class="showingUp-imgIcon" src="../assets/images/ink.png" alt="linkdin">
-            <img class="showingUp-imgIcon" src="../assets/images/github-icon-24.jpg" alt="gitHub">
+            <img @click="changeLocation(linkedin)" class="showingUp-imgIcon" src="../assets/images/ink.png" alt="linkdin">
+            <img  @click="changeLocation(github)" class="showingUp-imgIcon" src="../assets/images/github-icon-24.jpg" alt="gitHub">
             <img class='showingUp-imgIcon' src='../assets/images/9204385.png' alt='gitHub'>
         </div>
     </div>
     <!--my image--->
-            <img class='showingUp-imgProfil' src='../assets/images/okotsu.jpg' alt='gitHub'>
+            <img class='showingUp-imgProfil' src='../assets/images/profil/profil.jpg' alt='gitHub'>
   </div>
 </template>
 
@@ -32,7 +32,9 @@ export default {
       move: {
         transform: 'translate(100%)',
         transition: 'all 0s'
-      }
+      },
+      linkedin:'https://www.linkedin.com/in/zouayobo-ange-paterne-dali-aa385429b/',
+      github:'https://github.com/SprigganTwelve',
     }
   },
   mounted () {
@@ -74,6 +76,9 @@ export default {
       setTimeout(() => {
         parent.insertBefore(before, next)
       }, time)
+    },
+    changeLocation(location){
+      window.location.href = location;
     }
   }
 }

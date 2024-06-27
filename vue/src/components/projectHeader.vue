@@ -5,15 +5,39 @@
           <div id="boxImage">
             <img id="projectImage" :src="image" alt="">
             <div class="projectHeader-imgIcon">
-              <img class="projecticon" id="githubIcon" src="../assets/images/github-icon-24.jpg" alt="gitHub">
-              <svg class="projecticon" id="downloadIcon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg>
+              <img   @click="handleImageClick" class="projecticon" id="githubIcon" src="../assets/images/github-icon-24.jpg" alt="gitHub">
             </div>
           </div>
-          <span>{{ name }}</span>
+          <h1 >{{ name }}</h1>
     </div>
-    <p  v-rewrite>
-       {{ description }}
-    </p>
+    <div>
+      <div class="text_block"> 
+         
+          <p style="text-align: start;"  v-rewrite>
+            {{ description }}
+          </p>
+
+        <div class="textpoint"  v-if="fonctionnality.length != 0 ">
+          
+         <h2 class="title"  v-if="fonctionnality.length != 0 " >Fonctionnalités</h2>
+          <div class="ulBlock">
+           <ul v-for="item in fonctionnality ">
+              <li style="text-align: start;"  >• {{ item }}</li>
+           </ul>   
+         </div>  
+
+         <h2 class="title"  v-if="technDetails.length != 0 " >Détails Techniques</h2>
+          <div class="ulBlock">
+           <ul v-for="item in technDetails ">
+              <li style="text-align: start;"  >• {{ item }}</li>
+           </ul>   
+         </div>  
+
+        </div>
+
+      </div>
+
+    </div>
   </div>
 </template>
 
@@ -29,6 +53,9 @@ export default {
       name: '',
       image:'',
       description:'',
+      fonctionnality:[],
+      technDetails:[],
+      httpGitHub:'',
     }
   },
   beforeMount: function (){
@@ -40,6 +67,11 @@ export default {
     console.log(imageItem)
   },
   methods: {
+
+    handleImageClick(){
+      window.location.href = this.httpGitHub;
+    },
+
     displayProject: function () {
       axios.post("../../public/jsonContent/data.json")
       .then((resp)=>{
@@ -48,6 +80,9 @@ export default {
               this.name  = element.name
               this.image = element.image
               this.description = element.description
+              this.fonctionnality = element.fonctionnality ?? []
+              this.technDetails = element.technDetails??[]
+              this.httpGitHub = element.httpGitHub
           }
         });
       })
@@ -73,19 +108,22 @@ export default {
 }
 
 .projectHeader > div{
+
   display:flex;
   flex-direction : column;
+  align-items: center;
+  justify-content: center;
   gap:20px;
 
 }
 
-.projectHeader > p{
+/* .projectHeader > p{
   text-align : center;
   font-size:20px;
   padding:30px;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
-}
+} */
 
 .projectHeader > div >  #boxImage {
   position: relative;
@@ -132,5 +170,29 @@ export default {
   padding: 10px;
 
 }
+.text_block{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+.textpoint{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.ulBlock{
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 20px;
+}
 
+.title{
+  text-align: center;
+}
 </style>
