@@ -16,14 +16,20 @@
                   <img  src="../assets/images/satellite-meteorologique_Nasa_wiki_dp.jpg" alt="">
                   <div class="downloadLink">
                       <h1>Les satellite</h1>
-  
                   </div>
               </div>
           </div>
    
           <div class="atFirst" >
-              <div >
-               
+              <div>
+                <h1>Outils de veilles</h1>
+
+                  <div class="tools">
+                      <img src="../assets/images/feedly-logo.jpeg" alt="">
+                      <p>
+                        Feedly est une application web et mobile qui agrège du contenu de diverses sources en ligne, comme des blogs, sites d'actualités et podcasts, via des flux RSS. Elle permet aux utilisateurs de suivre, organiser et lire facilement ces contenus en un seul endroit. Lancée en 2008, Feedly est populaire pour sa capacité à centraliser et personnaliser les flux d'information.
+                      </p>
+                  </div>
 
               </div>
           </div>
@@ -67,7 +73,22 @@
       display: flex;
       justify-content: start;
   }
+
+  #largeCard > .atFirst > div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+  }
   
+
+
+  #largeCard > .atFirst >div >div >img{
+    width: 200px;
+    height: 200px;
+  }
+
+
   #largeCard > div >div > img {
       object-fit:cover;
       object-position:center;
@@ -140,5 +161,7 @@
       align-items: center;
   }
   
+
+ 
   
   </style>
