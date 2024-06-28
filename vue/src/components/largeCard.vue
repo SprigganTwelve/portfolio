@@ -1,139 +1,82 @@
 <template>
-<!-- present--->
-  <div id="largeCard">
-
-        <div class="atEnd">
-            <div>
-                <img  src="../assets/images/satellite-meteorologique_Nasa_wiki_dp.jpg" alt="">
-                <div class="downloadLink">
-                    <h1>Les satellite</h1>
-                    <a href="../../public/satellite.docx" download="satellite.docx">   <svg :class="color" xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30"><path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg></a>
-                </div>
-            </div>
-        </div>
- 
-        <div class="atFirst" >
-            <div >
-             
-                <img src="../assets/images/Intelligence-Artificielle.jpg" alt="">
-                <div class="downloadLink">    
-                    <h1>L'intelligance artificiel</h1>
-                    <a href="../../public/ia_veilles_techno.docx" download="ia_veilles_techno.docx">   <svg :class="color" xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30"><path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg></a>
-                </div>
+    <div>
+      <div class="mainComponent">
+        <div style="height: 20px;"></div>
+        <div v-for="item in articles" :key="item.guid" class="rowLayout">
+            <img  :src="item.enclosure.link??'../../public/depositphotos_62706797-stock-illustration-document-flat-circle-icon-with.jpg'" :alt="item.title">
+            <div class="columnLayout">
+                <h2>{{ item.title }}</h2>
+                <p>{{ item.description}}</p>
+                <a style="text-align: start;" :href="item.link">En savoir plus</a>
             </div>
         </div>
 
-  </div>
-</template>
-
-<script>
-
-export default {
-  name: 'App5',
-  props: ['color']
-}
-</script>
-
-<style scoped>
-/*----position---*/
-
-#largeCard {
-    display:flex;
-    flex-direction:column;
+      </div>
+    </div>
+  </template>
+  
+  <script>
+  import axios from 'axios';
+  
+  export default {
+    name: 'App5',
+    props: ['color'],
+    data() {
+      return {
+        articles: []
+      }
+    },
+    methods: {
+      async fetchRSSFeed() {
+        const RSS_JSON_URL = "https://api.rss2json.com/v1/api.json?rss_url=http%3A%2F%2Fiatranshumanisme.com%2Ffeed%2F";
+  
+        try {
+          const response = await axios.get(RSS_JSON_URL);
+          this.articles = response.data.items.slice(0, 2) || [];
+          console.log(response);
+        } catch (error) {
+          console.error('Error fetching the RSS feed:', error);
+        }
+      }
+    },
+    mounted() {
+      this.fetchRSSFeed();
+    }
+  }
+  </script>
+  
+  <style scoped>
+  .mainComponent {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
     justify-content: center;
     align-items: center;
-    gap: 30px;
-    padding:30px;
-    margin: 70px;
-}
-
-#largeCard  div > img {
-    border-radius: 30px;
-}
-
-#largeCard > .atEnd {
-    width: 100%;
+  }
+  
+  .rowLayout {
     display: flex;
-    justify-content: end;
-}
+    justify-content: center;
+    gap: 20px;
+  }
 
-#largeCard > .atFirst {
-    width: 100%;
+  .columnLayout{
     display: flex;
+    flex-direction: column;
+    align-items: start;
     justify-content: start;
+    width: 700px;
+    gap: 20px;
+  }
+
+img{
+    height: 350px;
+    width: 400px;
+    border-radius: 20px;
 }
 
-#largeCard > div >div > img {
-    object-fit:cover;
-    object-position:center;
-    width:700px;
-    height:330px;
-    border: none;
-
+p{
+    font-size: 20px;
 }
-
-
-#largeCard > div >div > span {
-    position:absolute;
-    z-index:9999;
-    bottom:5px;
-    left:30px;
-}
-
-#largeCard > div> div {
-    position: relative;
-    width:700px;
-}
-
-#largeCard > div> div > svg{
-    position:absolute;
-    z-index:9999;
-    bottom:5px;
-    right:5px;
-    transition: all 1.3s
-}
-
-/*-----color---*/
-
-/*---- Svg -color---*/
-
-.iswhite{
-    fill:black;
-    background:white;
-    margin-left:30px;
-    padding:10px;
-    margin-top:20px;
-    border-radius:50%;
-    margin-bottom:15px;
-    cursor:pointer
-}
-.isblack {
-    fill:white;
-    background:black;
-    margin-left:30px;
-    padding:10px;
-    margin-top:20px;
-    border-radius:50%;
-    margin-bottom:15px;
-    cursor:pointer
-}
-
-#largeCard > div > div>  svg:hover{
- background:red;
- fill:white
-}
-/*--------*/
-
-/*-----border card Color ---*/
-
-.atEnd >div  {
-}
-
-.downloadLink{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-
-</style>
+  </style>
+  

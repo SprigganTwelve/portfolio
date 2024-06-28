@@ -1,7 +1,6 @@
 <template>
 <!--techno doc pages--->
   <div id="app5">
-    <!-- <homeIcon :color="colorIcon"></homeIcon> -->
     <largeCard :color="colorDownloadIcon"></largeCard>
   </div>
 </template>
@@ -15,7 +14,7 @@ export default {
   name: 'App5',
   components: {
     homeIcon,
-    largeCard
+    largeCard,
   },
   data () {
     return {
