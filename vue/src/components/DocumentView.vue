@@ -40,7 +40,7 @@
 
 export default {
   name: 'Document-View',
-  methods: {
+  methods: { 
 
   }
 }
