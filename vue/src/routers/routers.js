@@ -5,6 +5,7 @@ import App3 from '../App3.vue'
 import App4 from '../App4.vue'
 import App5 from '../App5.vue'
 import NotFound from '../NotFound.vue'
+import DocumentsView from '../components/DocumentView.vue'
 import showingUp from '../components/showingUp.vue'
 // there is also createWebHashHistory and createMemoryHistory
 
@@ -38,6 +39,11 @@ const routes = [
         path: '/thisProject',
         name: 'projet',
         component: App3
+    },
+    { 
+        path: '/docs',
+        name: 'documents',
+        component: DocumentsView
     },
     { 
         path: '/:catchAll(.*)',

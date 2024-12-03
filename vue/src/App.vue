@@ -17,7 +17,8 @@
 
       <div class="inEnd " id="navBar-hoverOption">
         <router-link class="routerLink" :to="{name: 'Home'}">Accueil</router-link>
-          <router-link class="routerLink" :to="{name: 'veilles'}">Veilles Technologiques</router-link>
+          <router-link class="routerLink" :to="{name: 'veilles'}">Veilles</router-link>
+          <router-link class="routerLink" :to="{name: 'documents'}">Documentation</router-link>
           <router-link class="routerLink" :to="{name: 'Competences'}">Compétences</router-link>
           <router-link class="routerLink" :to="{name: 'projets'}">Projets</router-link>
           <router-link class="routerLink" :to="{name: 'About'}">A propos</router-link>
@@ -65,9 +66,7 @@ export default {
   width: 100%;
   overflow: auto;
 }
-.inStart span{
-  font-size: 30px;
-}
+
 
 a{
   font-size: 20px;
@@ -126,6 +125,10 @@ border-radius : 50%;
       gap:5px;
       margin-top:20px;
       margin-left:30px
+}
+
+.inStart span{
+  font-size: 30px;
 }
 
 .inEnd{

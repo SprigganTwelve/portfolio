@@ -35,6 +35,10 @@
   min-height: 100vh;
 } */  /*issue with App3 here*/
 
+*{
+  font-family: Poppins;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
